@@ -125,7 +125,7 @@ class SuffixedMultiWidget(forms.MultiWidget):
 
 class RangeWidget(SuffixedMultiWidget):
     template_name = 'django_filters/widgets/multiwidget.html'
-    suffixes = ['min', 'max']
+    suffixes = ['0', '1']
 
     def __init__(self, attrs=None):
         widgets = (forms.TextInput, forms.TextInput)
@@ -138,7 +138,7 @@ class RangeWidget(SuffixedMultiWidget):
 
 
 class DateRangeWidget(RangeWidget):
-    suffixes = ['after', 'before']
+    suffixes = ['0', '1']
 
 
 class LookupChoiceWidget(SuffixedMultiWidget):
